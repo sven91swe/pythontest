@@ -6,7 +6,7 @@ import coverage
 
 print("UnitTests:")
 
-cov = coverage.Coverage()
+cov = coverage.Coverage(omit="tests*")
 cov.start()
 
 testsToRun = unittest.TestLoader().discover(start_dir="tests", pattern="*.py")
